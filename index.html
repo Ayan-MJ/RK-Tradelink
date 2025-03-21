@@ -9,19 +9,23 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.rktradelink.com" />
     <title>RK Tradelink - Carrying & Forwarding Services in India</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
 
         :root {
-            --primary-color: #e84118;
-            --dark-color: #1e272e;
+            --primary-color: #ff4b36;
+            --dark-color: #1a1f2b;
             --light-color: #f5f6fa;
             --grey-color: #7f8fa6;
+            --orange-color: #ff6b4a;
         }
 
         body {
@@ -53,8 +57,9 @@
         }
 
         .logo {
-            width: 180px;
+            width: 160px;
             height: auto;
+            object-fit: contain;
         }
 
         .nav-links {
@@ -86,15 +91,15 @@
 
         /* Hero Section */
         .hero {
-            /* Replaced the placeholder with Warehousing.jpg */
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url('images/Warehousing.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('images/new/warehouse-main.jpg') center/cover no-repeat;
             height: 80vh;
             display: flex;
             align-items: center;
             color: white;
             text-align: center;
             padding-top: 80px;
+            background-attachment: fixed;
         }
 
         .hero-content {
@@ -116,15 +121,18 @@
             display: inline-block;
             background-color: var(--primary-color);
             color: white;
-            padding: 12px 30px;
-            border-radius: 4px;
+            padding: 14px 32px;
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 6px rgba(255, 75, 54, 0.2);
         }
 
         .btn:hover {
-            background-color: #c23616;
+            background-color: #e63e2b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(255, 75, 54, 0.3);
         }
 
         /* Services Section */
@@ -158,12 +166,13 @@
             background-color: white;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
 
         .service-img {
@@ -399,15 +408,17 @@
         }
 
         .capability-item {
-            text-align: center;
+            background-color: var(--light-color);
             padding: 30px;
-            background-color: #f5f6fa;
             border-radius: 8px;
-            transition: transform 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
         }
 
         .capability-item:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
+            border-color: var(--primary-color);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
 
         .capabilities-content {
@@ -540,6 +551,27 @@
         img:not(.logo) {
             loading: lazy;
         }
+
+        /* Add image optimization styles */
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+
+        /* Update typography */
+        h1, h2, h3 {
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-weight: 400;
+            letter-spacing: 0.2px;
+        }
     </style>
 </head>
 <body>
@@ -547,9 +579,8 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <!-- Updated logo path -->
                 <div class="logo-container">
-                    <img src="images/logo.jpg" alt="RK Tradelink Logo" class="logo">
+                    <img src="images/new/rk-logo.jpg" alt="RK Tradelink Logo" class="logo">
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -585,7 +616,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="images/Transportation.jpg" alt="Freight Forwarding">
+                        <img src="images/new/truck-white.jpg" alt="Freight Forwarding">
                     </div>
                     <div class="service-content">
                         <h3>Freight Forwarding</h3>
@@ -594,7 +625,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="images/Warehousing.jpg" alt="Warehousing">
+                        <img src="images/new/warehouse-interior.jpg" alt="Warehousing">
                     </div>
                     <div class="service-content">
                         <h3>Warehousing and Distribution</h3>
@@ -603,7 +634,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="images/Inventory Management.jpg" alt="Inventory Management">
+                        <img src="images/new/warehouse-racks.jpg" alt="Inventory Management">
                     </div>
                     <div class="service-content">
                         <h3>Inventory Management</h3>
@@ -612,7 +643,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="images/Transportation.jpg" alt="3PL C&F Services">
+                        <img src="images/new/truck-red.jpg" alt="3PL C&F Services">
                     </div>
                     <div class="service-content">
                         <h3>3PL C&F Services</h3>
@@ -808,15 +839,15 @@
                     <h3>Our Contact Information</h3>
                     <div class="contact-item">
                         <span>📍</span>
-                        <p>123 Business Park, Main Road, Mumbai, India - 400001</p>
+                        <p>52 Seminary Hills, Nagpur, Maharashtra, India</p>
                     </div>
                     <div class="contact-item">
                         <span>📞</span>
-                        <p>+91 98765 43210</p>
+                        <p>+91 9766686751, +91 9260502324</p>
                     </div>
                     <div class="contact-item">
                         <span>✉️</span>
-                        <p>info@rktradelink.com</p>
+                        <p>rktradelinks21@gmail.com</p>
                     </div>
                     <div class="contact-item">
                         <span>⏰</span>
