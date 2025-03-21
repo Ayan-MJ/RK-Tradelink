@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RK Tradelink - Leading logistics provider offering comprehensive carrying & forwarding services across India. Warehousing, transportation, and inventory management solutions.">
+    <meta name="keywords" content="logistics, warehousing, transportation, carrying and forwarding, C&F services, inventory management, India logistics">
+    <meta name="author" content="RK Tradelink">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.rktradelink.com" />
+    <title>RK Tradelink - Carrying & Forwarding Services in India</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #e84118;
+            --dark-color: #1e272e;
+            --light-color: #f5f6fa;
+            --grey-color: #7f8fa6;
+        }
+
+        body {
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            /* Replaced the placeholder with Warehousing.jpg */
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('images/Warehousing.jpg') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #c23616;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--grey-color);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 20px;
+        }
+
+        .service-content h3 {
+            margin-bottom: 10px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 60px 0;
+            background-color: var(--dark-color);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .stat-text {
+            color: #ddd;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .contact-info {
+            padding: 30px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .contact-item span {
+            margin-right: 15px;
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Core Capabilities Styles */
+        .capabilities {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .capability-item {
+            text-align: center;
+            padding: 30px;
+            background-color: #f5f6fa;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .capability-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .capabilities-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Technology Integration Styles */
+        .technology {
+            padding: 80px 0;
+            background-color: #f5f6fa;
+        }
+
+        .tech-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .tech-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .tech-list li {
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Warehouse Specifications Styles */
+        .warehouse-specs {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+
+        .specs-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .main-specs {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .specs-card {
+            background-color: #f5f6fa;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .specs-card h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .specs-card ul {
+            list-style: none;
+        }
+
+        .specs-card ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .specs-card ul li:before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .additional-locations {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Geographic Reach Styles */
+        .geographic-reach {
+            padding: 80px 0;
+            background-color: #f5f6fa;
+        }
+
+        .reach-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .location-info h3 {
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+        }
+
+        .location-info ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .location-info ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .location-info ul li:before {
+            content: "→";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+        
+        /* Add loading="lazy" to all images except the logo */
+        img:not(.logo) {
+            loading: lazy;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- Updated logo path -->
+                <div class="logo-container">
+                    <img src="images/logo.jpg" alt="RK Tradelink Logo" class="logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#capabilities">Capabilities</a></li>
+                    <li><a href="#warehouse">Warehouse</a></li>
+                    <li><a href="#reach">Locations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">☰</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your Trusted Carrying & Forwarding Partner</h1>
+                <p>RK Tradelink provides comprehensive logistics solutions across India with efficiency, reliability, and excellence</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/Transportation.jpg" alt="Freight Forwarding">
+                    </div>
+                    <div class="service-content">
+                        <h3>Freight Forwarding</h3>
+                        <p>Comprehensive freight forwarding solutions with our own fleet of vehicles for efficient transportation.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/Warehousing.jpg" alt="Warehousing">
+                    </div>
+                    <div class="service-content">
+                        <h3>Warehousing and Distribution</h3>
+                        <p>State-of-the-art warehousing facilities with modern infrastructure for safe storage and efficient distribution.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/Inventory Management.jpg" alt="Inventory Management">
+                    </div>
+                    <div class="service-content">
+                        <h3>Inventory Management</h3>
+                        <p>Advanced inventory management solutions with real-time tracking and reporting systems.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="images/Transportation.jpg" alt="3PL C&F Services">
+                    </div>
+                    <div class="service-content">
+                        <h3>3PL C&F Services</h3>
+                        <p>Complete third-party logistics and C&F services for streamlined supply chain operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warehouse Specifications -->
+    <section class="warehouse-specs" id="warehouse">
+        <div class="container">
+            <div class="section-title">
+                <h2>Warehouse Specifications</h2>
+            </div>
+            <div class="specs-content">
+                <div class="main-specs">
+                    <p>We have leased a newly constructed, NMRDA-sanctioned warehouse featuring eight docks and a 30-foot ceiling height, complete with a fire NOC. This Pre-Engineered Building (PEB) warehouse boasts industrial RCC flooring and a two-way access road for efficient logistics operations.</p>
+                </div>
+                <div class="specs-grid">
+                    <div class="specs-card">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>Carpet Area: Ranging from 3,000 to 15,000 square feet</li>
+                            <li>Multiple Entrances: Designed to facilitate smooth traffic flow</li>
+                            <li>Parking: Ample space available to accommodate various vehicle sizes</li>
+                            <li>Custom Partitioning: Available to meet specific company requirements</li>
+                        </ul>
+                    </div>
+                    <div class="specs-card">
+                        <h3>Utilities</h3>
+                        <ul>
+                            <li>CCTV Surveillance</li>
+                            <li>Guard Room</li>
+                            <li>Office Cabin</li>
+                            <li>Electricity</li>
+                            <li>Three Washrooms</li>
+                            <li>High-speed Internet</li>
+                            <li>Water Facilities</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="additional-locations">
+                    <p>Additionally, we have warehouses available in the Wadi, Waddhamana, Fetri, and Gumgaon regions, ranging from 2,000 to 40,000 square feet, all compliant with industry standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geographic Reach -->
+    <section class="geographic-reach" id="reach">
+        <div class="container">
+            <div class="section-title">
+                <h2>Geographic Reach</h2>
+            </div>
+            <div class="reach-content">
+                <div class="location-info">
+                    <h3>Strategic Location</h3>
+                    <p>Our leased facility is situated in Gondkhairi, along the Mumbai-Nagpur Highway, in close proximity to the Gondkhairi Toll Plaza.</p>
+                    
+                    <h3>Location Advantages</h3>
+                    <p>Our strategically positioned facility offers convenient access to major thoroughfares, including:</p>
+                    <ul>
+                        <li>Nagpur-Amravati Road</li>
+                        <li>Mumbai-Kolkata Highway</li>
+                        <li>Samruddhi Expressway</li>
+                        <li>Mumbai-Nagpur Highway</li>
+                        <li>Bazargaon-Wardha Road</li>
+                    </ul>
+                    <p>Surrounded by leading logistics companies such as Safexpress, Bluedart, V-Trans, OM Logistics, and ACPL Warehouse, this location ensures unparalleled connectivity and transportation efficiency, enhancing access to all city exits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Who We Are?</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>R.K. TRADELINKS has been a leading logistics provider since 2001, offering total logistics solutions to esteemed clients such as V-Trans Ind and NPL Bluesky and have worked with Patel Roadways. Our comprehensive services encompass warehousing, clearing and forwarding (C&F), and both primary and secondary transportation, all supported by our own fleet of vehicles.</p>
+                    <p>Backed by a dedicated team with over 20 years of experience in managing high-value and time-sensitive logistics, we operate warehouses ranging from 2,000 to 40,000 square feet. We pride ourselves on delivering tailored logistics solutions that meet client needs, providing high-quality services at competitive prices.</p>
+                    <p>Choose R.K. TRADELINKS for assured excellence in service quality.</p>
+                </div>
+                <div class="about-img">
+                    <img src="images/Warehousing.jpg" alt="RK Tradelink Warehouse">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Capabilities Section -->
+    <section class="capabilities" id="capabilities">
+        <div class="container">
+            <div class="section-title">
+                <h2>Core Capabilities</h2>
+            </div>
+            <div class="capabilities-grid">
+                <div class="capability-item">
+                    <h3>On Time Delivery</h3>
+                </div>
+                <div class="capability-item">
+                    <h3>Wide Reach</h3>
+                </div>
+                <div class="capability-item">
+                    <h3>Cost Effective Solutions</h3>
+                </div>
+            </div>
+            <div class="capabilities-content">
+                <p>R.K. TRADELINKS offers extensive network coverage across multiple locations for quick and seamless distribution. We are recognized for our competitive pricing and cost-effective CFA services, providing exceptional value for businesses of all sizes and types.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Integration Section -->
+    <section class="technology" id="technology">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technology Integration</h2>
+            </div>
+            <div class="tech-content">
+                <p>We utilize a variety of advanced technologies to enhance speed, safety, and reliability, including:</p>
+                <ul class="tech-list">
+                    <li>Use of GPS for Ease</li>
+                    <li>Warehouse Management Systems (WMS)</li>
+                    <li>Transportation Management System</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-text">Years of Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-text">Satisfied Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-text">Cities Covered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100K+</div>
+                    <div class="stat-text">Shipments Delivered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for all your C&F and logistics requirements</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required minlength="10" maxlength="500"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Our Contact Information</h3>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <p>123 Business Park, Main Road, Mumbai, India - 400001</p>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <p>+91 98765 43210</p>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <p>info@rktradelink.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <span>⏰</span>
+                        <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>RK Tradelink</h3>
+                    <p>Your trusted partner for all carrying and forwarding needs across India.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Warehousing</a></li>
+                        <li><a href="#">Transportation</a></li>
+                        <li><a href="#">Inventory Management</a></li>
+                        <li><a href="#">Distribution</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Service Areas</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Maharashtra</a></li>
+                        <li><a href="#">Madhya Pradesh</a></li>
+                        <li><a href="#">Chhattisgarh</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RK Tradelink. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
