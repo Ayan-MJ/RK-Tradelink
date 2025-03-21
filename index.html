@@ -60,6 +60,7 @@
             width: 160px;
             height: auto;
             object-fit: contain;
+            filter: brightness(1.02);
         }
 
         .nav-links {
@@ -92,7 +93,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('images/new/warehouse-main.jpg') center/cover no-repeat;
+                        url('images/warehouse-interior-1.jpg') center/cover no-repeat;
             height: 80vh;
             display: flex;
             align-items: center;
@@ -176,19 +177,20 @@
         }
 
         .service-img {
-            height: 200px;
+            height: 250px;
             overflow: hidden;
+            position: relative;
         }
 
         .service-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s;
+            transition: transform 0.5s ease;
         }
 
         .service-card:hover .service-img img {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
         .service-content {
@@ -219,7 +221,10 @@
 
         .about-img img {
             width: 100%;
+            height: 400px;
+            object-fit: cover;
             border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
         /* Stats Section */
@@ -580,7 +585,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo-container">
-                    <img src="images/new/rk-logo.jpg" alt="RK Tradelink Logo" class="logo">
+                    <img src="images/RK-TRADELINK-LOGO.jpg" alt="RK Tradelink Logo" class="logo">
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -616,7 +621,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="images/new/truck-white.jpg" alt="Freight Forwarding">
+                        <img src="images/truck-white.jpg" alt="Freight Forwarding">
                     </div>
                     <div class="service-content">
                         <h3>Freight Forwarding</h3>
@@ -625,7 +630,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="images/new/warehouse-interior.jpg" alt="Warehousing">
+                        <img src="images/warehouse-interior-1.jpg" alt="Warehousing">
                     </div>
                     <div class="service-content">
                         <h3>Warehousing and Distribution</h3>
@@ -634,7 +639,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="images/new/warehouse-racks.jpg" alt="Inventory Management">
+                        <img src="images/warehouse-interior-2.jpg" alt="Inventory Management">
                     </div>
                     <div class="service-content">
                         <h3>Inventory Management</h3>
@@ -643,7 +648,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="images/new/truck-red.jpg" alt="3PL C&F Services">
+                        <img src="images/truck-red.jpg" alt="3PL C&F Services">
                     </div>
                     <div class="service-content">
                         <h3>3PL C&F Services</h3>
@@ -733,7 +738,7 @@
                     <p>Choose R.K. TRADELINKS for assured excellence in service quality.</p>
                 </div>
                 <div class="about-img">
-                    <img src="images/Warehousing.jpg" alt="RK Tradelink Warehouse">
+                    <img src="images/warehouse-interior-2.jpg" alt="RK Tradelink Warehouse">
                 </div>
             </div>
         </div>
